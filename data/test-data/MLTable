@@ -1,0 +1,8 @@
+type: mltable
+paths:
+  - file: ./diabetes-test.csv
+transformations:
+  - read_delimited:
+      delimiter: ","
+      header: all_files_same_headers
+      infer_column_types: auto
