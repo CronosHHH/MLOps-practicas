@@ -1,0 +1,15 @@
+artifact_uri: file:///home/renato/Desktop/MLOps-practicas/mlruns/296912912954074563/b07f6232350646fd9dc0362f7c511370/artifacts
+end_time: 1783680103082
+entry_point_name: ''
+experiment_id: '296912912954074563'
+lifecycle_stage: active
+run_id: b07f6232350646fd9dc0362f7c511370
+run_name: orderly-wren-46
+run_uuid: b07f6232350646fd9dc0362f7c511370
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783680102878
+status: 4
+tags: []
+user_id: renato

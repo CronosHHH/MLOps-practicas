@@ -1,0 +1,9 @@
+digest: 0ca15e94
+name: validation_0
+profile: '{"features_shape": [1500, 8], "features_size": 12000, "features_nbytes":
+  48000}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float32\", \"shape\": [-1, 8]}}]", "targets": null}}'
+source: '{"tags": {"mlflow.user": "renato", "mlflow.source.name": "/home/renato/Desktop/MLOps-practicas/azure_mlflow_env/lib/python3.12/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

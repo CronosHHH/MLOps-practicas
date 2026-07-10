@@ -1,0 +1,6 @@
+artifact_location: file:///home/renato/Desktop/MLOps-practicas/mlruns/296912912954074563
+creation_time: 1783680076689
+experiment_id: '296912912954074563'
+last_update_time: 1783680076689
+lifecycle_stage: active
+name: diabetes-automl

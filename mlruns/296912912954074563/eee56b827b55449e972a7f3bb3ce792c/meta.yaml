@@ -1,0 +1,15 @@
+artifact_uri: file:///home/renato/Desktop/MLOps-practicas/mlruns/296912912954074563/eee56b827b55449e972a7f3bb3ce792c/artifacts
+end_time: 1783680166468
+entry_point_name: ''
+experiment_id: '296912912954074563'
+lifecycle_stage: active
+run_id: eee56b827b55449e972a7f3bb3ce792c
+run_name: abrasive-trout-863
+run_uuid: eee56b827b55449e972a7f3bb3ce792c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783680160663
+status: 3
+tags: []
+user_id: renato

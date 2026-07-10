@@ -1,0 +1,15 @@
+artifact_uri: file:///home/renato/Desktop/MLOps-practicas/mlruns/296912912954074563/d08c1112d0324477807cf4f635cd0fd3/artifacts
+end_time: 1783680182072
+entry_point_name: ''
+experiment_id: '296912912954074563'
+lifecycle_stage: active
+run_id: d08c1112d0324477807cf4f635cd0fd3
+run_name: unequaled-shrike-25
+run_uuid: d08c1112d0324477807cf4f635cd0fd3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783680176837
+status: 3
+tags: []
+user_id: renato

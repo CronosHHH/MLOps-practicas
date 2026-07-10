@@ -1,0 +1,9 @@
+digest: fd599c08
+name: dataset
+profile: '{"features_shape": [1500, 8], "features_size": 12000, "features_nbytes":
+  96000}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float64\", \"shape\": [-1, 8]}}]", "targets": null}}'
+source: '{"tags": {"mlflow.user": "renato", "mlflow.source.name": "/home/renato/Desktop/MLOps-practicas/azure_mlflow_env/lib/python3.12/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

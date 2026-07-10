@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1783702210997
+current_stage: None
+description: ''
+last_updated_timestamp: 1783702210997
+name: tracking-quickstart-iris-classifier
+run_id: 19a003a8b34e4889aa9fc3068d5cbc3a
+run_link: ''
+source: mlflow-artifacts:/618702986255311960/19a003a8b34e4889aa9fc3068d5cbc3a/artifacts/iris_classifier
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/618702986255311960/19a003a8b34e4889aa9fc3068d5cbc3a/artifacts/iris_classifier
+user_id: null
+version: 1

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/618702986255311960/19a003a8b34e4889aa9fc3068d5cbc3a/artifacts
+end_time: 1783702211046
+entry_point_name: ''
+experiment_id: '618702986255311960'
+lifecycle_stage: active
+run_id: 19a003a8b34e4889aa9fc3068d5cbc3a
+run_name: classy-fox-256
+run_uuid: 19a003a8b34e4889aa9fc3068d5cbc3a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783702206644
+status: 3
+tags: []
+user_id: renato
