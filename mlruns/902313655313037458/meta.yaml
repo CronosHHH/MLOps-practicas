@@ -1,0 +1,6 @@
+artifact_location: file:///home/renato/Desktop/MLOps-practicas/mlruns/902313655313037458
+creation_time: 1783866692580
+experiment_id: '902313655313037458'
+last_update_time: 1783866692580
+lifecycle_stage: active
+name: iris-classifier_azureML
