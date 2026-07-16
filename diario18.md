@@ -240,40 +240,23 @@ Para detener un trabajo de barrido en función del rendimiento de los modelos, p
         )
         ```
 ### script de entrenamiento para el ajuste de hiperparámetros
-Para ejecutar un trabajo de barrido.
 
-Incluya un argumento para cada hiperparámetros que desee variar.
-Registrar la métrica de rendimiento de destino con MLflow. 
-Una métrica registrada permite al trabajo de barrido evaluar el rendimiento de las pruebas que inicia e identificar el que genera el modelo de mejor rendimiento.
+---
 
-EJEMPLO:
+## Resumen del flujo de trabajo: Analogía del taxi
 
-```python
-import argparse
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-import mlflow
+A continuación se resume el proceso completo de un **Sweep Job** en Azure ML, desde la definición del trabajo base hasta el envío a la nube, con una analogía sencilla para recordar cada paso.
 
-# get regularization hyperparameter
-parser = argparse.ArgumentParser()
-parser.add_argument('--regularization', type=float, dest='reg_rate', default=0.01)
-args = parser.parse_args()
-reg = args.reg_rate
+| Paso | Código | Analogía |
+|:----:|:-------|:---------|
+| **1. Trabajo base** | `job = command(  ...  )` |**"Quiero un taxi que me lleve a la estación"** |
+| **2. Espacio de búsqueda** | `command_job_for_sweep = job(  ...  )` |**"Pero prueba 3 rutas diferentes"** |
+| **3. Sweep** | `sweep_job = command_job_for_sweep.sweep(  ...  )` | **"Configuro el viaje: prueba las 3 rutas, dime cuál fue la más rápida"** |
+| **4. Enviar** | `ml_client.create_or_update(sweep_job)` |**"¡Ejecuta!"** |
 
-# load the training dataset
-data = pd.read_csv("/data/iris-data/irish.csv")
 
-# separate features and labels, and split for training/validatiom
-X = data[['feature1','feature2','feature3','feature4']].values
-y = data['label'].values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30)
+---
 
-# train a logistic regression model with the reg hyperparameter
-model = LogisticRegression(C=1/reg, solver="liblinear").fit(X_train, y_train)
 
-# calculate and log accuracy
-y_hat = model.predict(X_test)
-acc = np.average(y_hat == y_test)
-mlflow.log_metric("Accuracy", acc)
+> **Nota importante:** El entorno de ejecución (`environment="Mi_docker-Img:1"`) es una imagen de Docker que creamos y registramos previamente en Azure ML. Esta imagen contiene todas las dependencias necesarias (scikit-learn, pandas, numpy, mlflow, mltable, etc.) y está definida en el [`Dockerfile`](../docker/Dockerfile). Al usar esta imagen personalizada, nos aseguramos de que el script `train.py` se ejecute en un entorno reproducible y consistente en la nube, con las mismas bibliotecas que tenemos en local.
+
