@@ -1,0 +1,20 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+compute: azureml:cpu-cluster
+description: "Pipeline para limpiar y normalizar datos usando componente registrado"
+
+inputs:
+  datos_crudos_entrada:
+    type: uri_file
+    path: azureml://datastores/workspaceblobstore/paths/datos_crudos.csv
+
+jobs:
+  paso_limpieza:
+    type: command
+    component: azureml:prep_data:1
+    inputs:
+      input_data: ${{parent.inputs.datos_crudos_entrada}}
+
+outputs:
+  datos_limpios:
+    type: uri_file
