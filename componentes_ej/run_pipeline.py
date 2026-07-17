@@ -16,10 +16,9 @@ ml_client = MLClient(
     workspace_name=os.getenv("AZURE_WORKSPACE_NAME")
 )
 
+loaded_component_prep = load_component(source="./prep.yml")
 
-prep_component = ml_client.components.create_or_update(
-    load_component(source="./prep.yml")
-)
+prep_component = ml_client.components.create_or_update(loaded_component_prep)
 
 pipeline_job = load_job(source="./pipeline.yml")
 
